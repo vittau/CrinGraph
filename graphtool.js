@@ -167,6 +167,7 @@ doc.html(`
                 </div>
               </div>
               <div class="settings-row">
+                <h5>AutoEQ parameters</h2>
                 <span>Freq Range</span>
                 <span><input name="autoeq-from" type="number" min="20" max="20000" step="1" value="20"></input></span>
                 <span><input name="autoeq-to" type="number" min="20" max="20000" step="1" value="20000"></input></span>
