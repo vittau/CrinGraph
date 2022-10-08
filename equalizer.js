@@ -16,9 +16,9 @@ Equalizer = (function() {
         // https://github.com/jaakkopasanen/AutoEq/issues/411
         AutoEQRange: [20, 15000],
         // Minimum and maximum Q for AutoEQ feature
-        OptimizeQRange: [0.5, 2],
+        OptimizeQRange: [0.5, 1.5],
         // Minimum and maximum Gain for AutoEQ feature
-        OptimizeGainRange: [-12, 12],
+        OptimizeGainRange: [-6, 6],
         // Delta and step of Freq, Q and Gain used for AutoEQ optimizing
         OptimizeDeltas: [
             [10, 10, 10, 5, 0.1, 0.5],
