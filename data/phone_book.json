@@ -1,6 +1,9 @@
 [
   {
     "name": "Moondrop",
-    "phones": [{"name":"Blessing 2:Dusk (Super* Review)","file":"Moondrop Blessing 2 Dusk"}]
+    "phones": [
+      {"name":"Aria (Super* Review)","file":"Moondrop Aria"},
+      {"name":"Chu (Super* Review)","file":"Moondrop Chu"},
+      {"name":"Blessing 2:Dusk (Super* Review)","file":"Moondrop Blessing 2 Dusk"}]
   }
 ]
