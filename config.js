@@ -32,7 +32,7 @@ const init_phones = ["Blessing 2:Dusk (Super* Review)"],                      //
       extraEnabled = true,                          // Enable extra features
       extraUploadEnabled = true,                    // Enable upload function
       extraEQEnabled = true,                        // Enable parametic eq function
-      extraEQBands = 10,                            // Default EQ bands available
+      extraEQBands = 6,                            // Default EQ bands available
       extraEQBandsMax = 20,                         // Max EQ bands available
       extraToneGeneratorEnabled = true;             // Enable tone generator function
 

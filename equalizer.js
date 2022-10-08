@@ -16,13 +16,13 @@ Equalizer = (function() {
         // https://github.com/jaakkopasanen/AutoEq/issues/411
         AutoEQRange: [20, 15000],
         // Minimum and maximum Q for AutoEQ feature
-        OptimizeQRange: [0.5, 1.5],
+        OptimizeQRange: [0.5, 1.6],
         // Minimum and maximum Gain for AutoEQ feature
         OptimizeGainRange: [-6, 6],
         // Delta and step of Freq, Q and Gain used for AutoEQ optimizing
         OptimizeDeltas: [
-            [10, 10, 10, 5, 0.1, 0.5],
-            [10, 10, 10, 2, 0.1, 0.2],
+            [50, 10, 10, 5, 0.1, 0.5],
+            [20, 10, 10, 2, 0.1, 0.2],
             [10, 10, 10, 1, 0.1, 0.1],
         ],
         // Use to get response diff by EQ before smoothing
