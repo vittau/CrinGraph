@@ -167,9 +167,16 @@ doc.html(`
                 </div>
               </div>
               <div class="settings-row">
-                <span>AutoEQ Range</span>
+                <h5>AutoEQ parameters</h5>
+                <span>Freq Range</span>
                 <span><input name="autoeq-from" type="number" min="20" max="20000" step="1" value="20"></input></span>
                 <span><input name="autoeq-to" type="number" min="20" max="20000" step="1" value="20000"></input></span>
+                <span>Gain Range</span>
+                <span><input name="autoeq-g-from" type="number" min="-15" max="15" step="0.5" value="-12"></input></span>
+                <span><input name="autoeq-g-to" type="number" min="-15" max="15" step="0.5" value="12"></input></span>
+                <span>Q Range</span>
+                <span><input name="autoeq-q-from" type="number" min="0.1" max="5" step="0.1" value="0.5"></input></span>
+                <span><input name="autoeq-q-to" type="number" min="0.1" max="5" step="0.1" value="2"></input></span>
               </div>
               <div class="filters-button">
                 <button class="add-filter">＋</button>
@@ -2586,6 +2593,14 @@ function addExtra() {
     let autoEQToInput = document.querySelector("div.extra-eq input[name='autoeq-to']");
     autoEQFromInput.value = Equalizer.config.AutoEQRange[0].toFixed(0);
     autoEQToInput.value = Equalizer.config.AutoEQRange[1].toFixed(0);
+    let autoEQGFromInput = document.querySelector("div.extra-eq input[name='autoeq-g-from']");
+    let autoEQGToInput = document.querySelector("div.extra-eq input[name='autoeq-g-to']");
+    autoEQGFromInput.value = Equalizer.config.OptimizeGainRange[0].toFixed(1);
+    autoEQGToInput.value = Equalizer.config.OptimizeGainRange[1].toFixed(1);
+    let autoEQQFromInput = document.querySelector("div.extra-eq input[name='autoeq-q-from']");
+    let autoEQQToInput = document.querySelector("div.extra-eq input[name='autoeq-q-to']");
+    autoEQQFromInput.value = Equalizer.config.OptimizeQRange[0].toFixed(1);
+    autoEQQToInput.value = Equalizer.config.OptimizeQRange[1].toFixed(1);
     document.querySelector("div.extra-eq button.autoeq").addEventListener("click", () => {
         // Generate filters automatically
         let phoneSelected = eqPhoneSelect.value;
@@ -2609,6 +2624,12 @@ function addExtra() {
             let autoEQFrom = Math.min(Math.max(parseInt(autoEQFromInput.value) || 0, 20), 20000);
             let autoEQTo = Math.min(Math.max(parseInt(autoEQToInput.value) || 0, autoEQFrom), 20000);
             Equalizer.config.AutoEQRange = [autoEQFrom, autoEQTo];
+            let autoEQQFrom = Math.min(Math.max(parseFloat(autoEQQFromInput.value) || 0, 0.1), 5);
+            let autoEQQTo = Math.min(Math.max(parseFloat(autoEQQToInput.value) || 0, autoEQQFrom), 5);
+            Equalizer.config.OptimizeQRange = [autoEQQFrom, autoEQQTo];
+            let autoEQGFrom = Math.min(Math.max(parseFloat(autoEQGFromInput.value) || 0, -15), 15);
+            let autoEQGTo = Math.min(Math.max(parseFloat(autoEQGToInput.value) || 0, autoEQGFrom), 15);
+            Equalizer.config.OptimizeGainRange = [autoEQGFrom, autoEQGTo];
             let phoneCHs = (phoneObj.rawChannels.filter(c => c)
                 .map(ch => ch.map(([f, v]) => [f, v + phoneObj.norm])));
             let phoneCH = (phoneCHs.length > 1) ? avgCurves(phoneCHs) : phoneCHs[0];
