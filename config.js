@@ -38,7 +38,7 @@ const init_phones = ["Moondrop Blessing 2 Dusk", "VitorMach Nov22 Target"],     
 
 // Specify which targets to display
 const targets = [
-    { type:"Enthusiast", files:["VitorMach Nov22"] },
+    { type:"Enthusiast", files:["VitorMach Nov22", "VitorMach Low Gain"] },
     { type:"Reviewer", files:["Super 22"] },
 ];
 
