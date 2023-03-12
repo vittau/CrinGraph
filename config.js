@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = ["Moondrop Blessing 2 Dusk", "VitorMach Nov22 Target"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["Moondrop Blessing 2 Dusk", "VitorMach Mar23 Target"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
@@ -38,8 +38,8 @@ const init_phones = ["Moondrop Blessing 2 Dusk", "VitorMach Nov22 Target"],     
 
 // Specify which targets to display
 const targets = [
-    { type:"Enthusiast", files:["VitorMach Nov22", "VitorMach Low Gain"] },
-    { type:"Reviewer", files:["Super 22"] },
+    { type:"Enthusiast", files:["VitorMach Mar23"] },
+    { type:"Reviewer", files:["Super 22", "Bad Guy", "Crinacle Neutral"] },
 ];
 
 
